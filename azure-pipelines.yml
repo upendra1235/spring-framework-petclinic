@@ -18,7 +18,7 @@ variables:
   environmentName: 'tailspin-space-game-1'
 
   # Agent VM image name
-  name: 'demopool'
+  #name: 'demopool'
 
 stages:
 - stage: Build
