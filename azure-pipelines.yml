@@ -18,7 +18,7 @@ variables:
   environmentName: 'tailspin-space-game-1'
 
   # Agent VM image name
-  #name: 'demopool'
+  name: 'demopool'
 
 stages:
 - stage: Build
@@ -27,7 +27,7 @@ stages:
   - job: MavenPackageAndPublishArtifacts
     displayName: Maven Package and Publish Artifacts
     pool:
-      name: $(demopool)
+      name: 'demopool'
 
     steps:
     - task: Maven@3
@@ -54,7 +54,7 @@ stages:
     displayName: Deploy Linux Web App
     environment: $(environmentName)
     pool:
-      name: $(demopool)
+      name: 'demopool'
     strategy:
       runOnce:
         deploy:
